@@ -26,7 +26,7 @@ using namespace std;
 // why is so because the prior multiples are already marked by previous numbers
 // for e.g for 4 3rd multiple of 4 i.e 12 is already marked by 3 as its 4th multiple
 
-void sieve(vector<int>&nums)
+void sieve(vector<bool>&nums)
 {
    for(int i=2;i*i<=nums.size();i++)
    {
@@ -52,7 +52,7 @@ int main()
    #endif  
   
    int n;cin>>n;
-   vector<int>nums(n+1,1);
+   vector<bool>nums(n+1,1);
    nums[0] = 0;
    nums[1] = 0;
    sieve(nums);
